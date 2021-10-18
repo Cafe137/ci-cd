@@ -1,0 +1,16 @@
+{
+    "name": "ci-cd",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cafe-utility": "^1.29.1"
+    },
+    "devDependencies": {
+        "pkg": "^5.3.3"
+    }
+}
