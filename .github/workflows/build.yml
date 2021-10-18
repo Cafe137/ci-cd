@@ -22,22 +22,7 @@ jobs:
                   cache: 'npm'
             - run: npm ci
             - run: npm run build
-            - name: Upload Linux package
-              uses: actions/upload-artifact@v2.2.4
-              with:
-                  name: hexrand-linux
-                  path: dist/hexrand-linux
-            - name: Upload Mac package
-              uses: actions/upload-artifact@v2.2.4
-              with:
-                  name: hexrand-macos
-                  path: dist/hexrand-macos
-            - name: Upload Win package
-              uses: actions/upload-artifact@v2.2.4
-              with:
-                  name: hexrand-win.exe
-                  path: dist/hexrand-win.exe
-            - name: Release
+            - name: Publish assets
               uses: softprops/action-gh-release@v1
               with:
                   files: |
