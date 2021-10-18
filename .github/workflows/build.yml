@@ -23,18 +23,18 @@ jobs:
                   cache: 'npm'
             - run: npm ci
             - run: npm run build
-            - name: linux package
+            - name: Upload Linux package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app
+                  name: app-linux
                   path: index-linux
-            - name: mac package
+            - name: Upload Mac package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app
+                  name: app-mac
                   path: index-macos
-            - name: win package
+            - name: Unload Win package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app
+                  name: app.exe
                   path: index-win.exe
