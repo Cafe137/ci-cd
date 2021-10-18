@@ -38,9 +38,7 @@ jobs:
               with:
                   name: hexrand-win.exe
                   path: dist/hexrand-win.exe
-            - name: Publish packages
-              uses: skx/github-action-publish-binaries@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Release
+              uses: softprops/action-gh-release@v1
               with:
-                  args: 'hexrand-*'
+                  files: [hexrand-linux, hexrand-macos, hexrand-win.exe]
