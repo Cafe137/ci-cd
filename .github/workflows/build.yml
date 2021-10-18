@@ -26,15 +26,15 @@ jobs:
             - name: Upload Linux package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app-linux
-                  path: index-linux
+                  name: hexrand-linux
+                  path: dist/hexrand-linux
             - name: Upload Mac package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app-mac
-                  path: index-macos
+                  name: hexrand-macos
+                  path: dist/hexrand-macos
             - name: Upload Win package
               uses: actions/upload-artifact@v2.2.4
               with:
-                  name: app.exe
-                  path: index-win.exe
+                  name: hexrand-win.exe
+                  path: dist/hexrand-win.exe

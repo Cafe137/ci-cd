@@ -1,14 +1,18 @@
 {
-    "name": "ci-cd",
+    "name": "hexrand",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "pkg index.js"
+        "build": "pkg ."
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "bin": "index.js",
+    "pkg": {
+        "outputPath": "dist"
+    },
     "dependencies": {
         "cafe-utility": "^1.29.1"
     },
