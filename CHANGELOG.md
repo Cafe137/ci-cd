@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://www.github.com/Cafe137/ci-cd/compare/v0.4.0...v0.5.0) (2021-10-20)
+
+
+### Miscellaneous Chores
+
+* release 0.5.0 ([1d1a801](https://www.github.com/Cafe137/ci-cd/commit/1d1a801bf2564250e6e6069aab64c9b0bb3c3d2e))
+
 ## [0.4.0](https://www.github.com/Cafe137/ci-cd/compare/v0.2.0...v0.4.0) (2021-10-20)
 
 
