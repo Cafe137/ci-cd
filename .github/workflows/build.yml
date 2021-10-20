@@ -26,13 +26,29 @@ jobs:
               uses: actions/upload-artifact@v2
               with:
                   path: dist
-    publish:
+
+    test:
         needs: build
         runs-on: ubuntu-latest
+        steps:
+            - name: Download all workflow run artifacts
+              uses: actions/download-artifact@v2
+            - name: Add executable flag
+              run: chmod +x ./artifact/hexrand-linux
+            - name: Execute hexrand binary
+              run: |
+                  ./artifact/hexrand-linux
+                  ./artifact/hexrand-linux 2
+                  ./artifact/hexrand-linux 4
+                  ./artifact/hexrand-linux 8
+                  ./artifact/hexrand-linux 16
+                  ./artifact/hexrand-linux 32
+                  ./artifact/hexrand-linux 64
+                  ./artifact/hexrand-linux 128
 
-        strategy:
-            matrix:
-                node-version: [16.x]
+    publish:
+        needs: test
+        runs-on: ubuntu-latest
 
         steps:
             - name: Download all workflow run artifacts
