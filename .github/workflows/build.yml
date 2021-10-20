@@ -41,6 +41,6 @@ jobs:
               uses: softprops/action-gh-release@v1
               with:
                   files: |
-                      dist/hexrand-linux
-                      dist/hexrand-macos
-                      dist/hexrand-win.exe
+                      artifact/dist/hexrand-linux
+                      artifact/dist/hexrand-macos
+                      artifact/dist/hexrand-win.exe
